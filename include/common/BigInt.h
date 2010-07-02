@@ -64,8 +64,6 @@
 #define UNDECORATED_FUNCTION_NAME   "Unable to detect UNDECORATED_FUNCTION_NAME"
 #endif
 
-
-
 // ========== FUNCTION_NAME MACROS (END) ===========
 // =================================================
 

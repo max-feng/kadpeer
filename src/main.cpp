@@ -14,7 +14,7 @@ int main()
 	ret =ret*i;
 	sum+=ret;
     }
-    cout<<sum.toStrDec()<<endl;
+    cout<<sum<<endl;
     end=clock();
     cout<<"Run Time:"<<(end-start)*1.0/CLOCKS_PER_SEC<<endl;
     return 0;

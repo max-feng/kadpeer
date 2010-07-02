@@ -1983,6 +1983,6 @@ void BigInt::Rossi::showUnits(std::ostream& o_stream) const
 // ------------------
 std::ostream& operator<< (std::ostream& o_os, const BigInt::Rossi& i_ins)
 {
-    // return o_os << i_ins.toStrDec();
-    return o_os << i_ins.toStr0xHex();
+    return o_os << i_ins.toStrDec();
+    //return o_os << i_ins.toStr0xHex();
 }
