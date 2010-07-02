@@ -3,9 +3,10 @@
 CC=gcc
 CXX=g++
 debug=yes
-ifeq ($(debug),no)
+ifeq ($(debug),yes)
 CFLAGES= -g3
-INCDIR=
+INCDIR= -I./include/\
+	-I./include/common
 LIBS=
 else 
 INCDIR= -I/usr/include/mysql++ \
