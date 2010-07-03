@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include"BigInt.h"
+#include"HashMap.h"
 #include<ctime>
 using namespace std;
 int main()

@@ -4,10 +4,10 @@ CC=gcc
 CXX=g++
 debug=yes
 ifeq ($(debug),yes)
-CFLAGES= -g3
+CFLAGES= -g3 -Wno-deprecated
 INCDIR= -I./include/\
 	-I./include/common
-LIBS=
+LIBS= 
 else 
 INCDIR= -I/usr/include/mysql++ \
 	-I/usr/include/mysql \
