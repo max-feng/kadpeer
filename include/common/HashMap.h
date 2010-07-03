@@ -2,6 +2,7 @@
 #define HASH_MAP_H
 #include <ext/hash_map>
 #include <boost/shared_ptr.hpp>
+#include <new>
 
 template <class K, class V, class F, class E>
 class HashMap : public __gnu_cxx::hash_map<K, V, F, E> 
@@ -48,18 +49,19 @@ private:
 };
 
 
+//Hash Map
 template <class T>
 class StringMap {
 
 public:
-    
+//   
     typedef typename HashMap<const char *, boost::shared_ptr< StringMapEntry<T> >,
 			     CharArrayHashFunc, CharArrayEqualFunc>::iterator 
 			     iterator;
 
     typedef typename HashMap<const char *, boost::shared_ptr< StringMapEntry<T> >,
 			     CharArrayHashFunc, CharArrayEqualFunc>::const_iterator 
-			     const_iterator;
+                             const_iterator;
     
     bool get(const char * key, T & value) const {
 	const_iterator it;
@@ -86,8 +88,7 @@ public:
 	if(_map.find(key) != _map.end()){
 	    return true;
 	}
-      
-	return false;
+     	return false;
     }
 
     void getKeys(std::vector<std::string> & keys) const {
@@ -143,6 +144,4 @@ protected:
 	    CharArrayEqualFunc> _map;
 
 };
-
-
 #endif
